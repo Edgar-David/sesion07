@@ -25,28 +25,32 @@
                 </ul>
             </nav>
         </header>
-        <h5>Destinos</h5>        
+        <h5><i class="fa-solid fa-location-dot"></i> Destinos</h5>        
         <main>
             <section>
                 <article>
-                    <h2>Video en formato mp4</h2>                    
-                    <video src="video/video-640x360.mp4" width="640" height="360" autoplay controls loop poster="img/globos-aerostaticos.jpg">
+                    <h2>Video en formato mp4</h2>
+                    <div class="video-responsive">
+                        <video class="video" src="video/video-640x360.mp4" autoplay controls loop poster="img/globos-aerostaticos.jpg">
                         <p>Lo sentimos, su navegador nopuede reproducir video</p>
-                    </video>
+                        </video>
+                    </div>
                 </article>
                 <article>
                     <h2>Videos alternativos</h2>
-                    <video width="640" height="360" autoplay controls loop>
-                        <source src="video/video-640x360.mp4" type="video/mp4" />
-                        <source src="video/video-640x360.webm" type="video/mp4" />
-                        <img src="img/globos-aerostaticos.jpg" alt="Video no soportado" />
-                        <p>Lo sentimos, su navegador no puede reproducir video</p>
-                    </video>                           
+                    <div class="video-responsive">
+                        <video class="video" autoplay controls loop>
+                            <source src="video/video-640x360.mp4" type="video/mp4" />
+                            <source src="video/video-640x360.webm" type="video/mp4" />
+                            <img src="img/globos-aerostaticos.jpg" alt="Video no soportado" />
+                            <p>Lo sentimos, su navegador no puede reproducir video</p>
+                        </video>  
+                    </div>                                             
                 </article>
             </section>
             <aside>
                 <div>
-                    <h2>Promociones</h2>
+                    <h3>Promociones</h3>
                     <img src="img/formulario.png" alt="formulario">
                     <img src="img/promo1.png" alt="promo1">
                     <img src="img/promo2.png" alt="promo2">

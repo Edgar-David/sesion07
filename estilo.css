@@ -1,17 +1,18 @@
-:root{
+*{ /*Reseteo o normalizacion de margenes y paddings predeterminados*/
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: "Oxygen", sans-serif;
+}
+:root{
     --color1:#334960;
     --color2:#F2F2F2;
     --color3:#44A1F2;
-    --color4:#99A4B0;
-    font-family: "Oxygen", sans-serif;
-    background-color: var(--color2);
+    --color4:#99A4B0;   
 }
 #contenedor{
     width: 100%;
-    height: 280vh;  
+    height: 110vh;  
 }
 header{     
     background-color: var(--color1);
@@ -53,18 +54,24 @@ nav{
 }
 h5{
     color:var(--color1);
-    margin-top: 120px;
+    margin-top: 115px;    
+    margin-left:15px;
 }
 main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: start; 
-       
+    align-items: center;
+    border:1px solid grey;
+    margin-bottom:10px          
 }
 section{
-    width:60%;    
-    text-align: center; 
+    width:65%;    
+    text-align: center;      
+}
+section article{
+    width:90%;    
+    margin:5px auto;
 }
 section article img{
     max-width: 90%;
@@ -74,7 +81,7 @@ section article p{
     margin: auto;
     padding: 5px;
     font-size: 0.8em;
-    font-style: italic;   
+    font-style: italic;     
 }
 section article h2{
     /*posicionamiento adhesivo*/
@@ -82,68 +89,84 @@ section article h2{
     top:100px;
     background-color: var(--color2);
     z-index: 20;
-    padding: 10px;
+    padding: 1px 5px;    
 }
 aside{
-    width: 30%;    
-    text-align: center;   
+    width: 30%;
+    text-align: center;    
 }
 aside img{
     max-width: 70% ;
+    margin-bottom: 10px;
 }
 footer{  
     background-color: var(--color1);
-    color:var(--color2)
+    color:var(--color2);    
+    font-size: 0.8rem;  
 }
 footer h4{
-    padding-top: 12px;
-    text-align: center;    
+    padding:10px 5px;
+    text-align: center;   
 }
 footer div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;    
+    margin:2px;
+}
+address ul{    
+    padding:2px 15px;
 }
 nav p{
     text-align: center;
 }
 /*Videos responsivos*/
-.video-responsive{
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    border:1px solid var(--color3);
-    
+/*video.html y destino.html*/
+.video-responsive{ /*contenedor del video*/
+    position: relative;/* Muy importante para posicionar el iframe o etiqueta video */
+    height: 0;/* Se establece en 0 para que la altura sea determinada por el padding */
+    padding-bottom: 56.25%;/* Esto crea el espacio vertical 16:9 */
+    border:1px solid var(--color3);    
 }
-.video-responsive iframe{
-    position: absolute;
+.video{
+    position: absolute;/* El iframe se posiciona de forma absoluta dentro del contenedor */
     top:0;
     left:0;
     width: 100%;
-    height: 100%;
+    height: 100%; /* El iframe o etiqueta video ocupa todo el espacio definido por el padding */
 }
 /*Video de fondo*/
-#video{
-    min-width: 100%;
+#video_fondo{
+    /* min-width: 100%;
     min-height: 100%;
     width:auto;
-    height: auto;
+    height: auto; */
     position: fixed;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0.9;    
 }
 /*texto de fondo*/
 #contenido{
     /*main ya tiene flex box centrado*/
    width:100%;      
-   z-index: 10;
+   z-index: 10;   
 }
+.blanco{color:var(--color2)}
 main #texto{
-    width:50%;    
+    width:80%;    
     padding:10px;  
     z-index: 50;
     color:var(--color2);
     text-align:justify;
+}
+.fijo{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:100;  
 }
